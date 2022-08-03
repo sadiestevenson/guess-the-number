@@ -3,36 +3,34 @@
 <head>
 </head>
 <body>
-	<script>
+    <script>
         let num = Math.floor(Math.random() * 11);
-        let guess = prompt("guess a number between 1 and 10");
-        let gotIT= false;
-        let numGuesses = 0;
+
+        let guess = prompt("guess a number between 1 and 100");
+
+        let gotIt = false;
+        let numGuesses = 58;
 
         while(gotIt === false){
             numGuesses++;
             if(num == guess)
             {
-                //alert("Got it!");
-
-             gotIt=true; //break out of loop
-
-            }else{ //continue since answer is incorrect
-
-                if(num > guess){//higher!
-                    guess = prompt("Higher");
-
-                }else{//lower
-                    guess= prompt("Lower");
-
-                }
+                gotIt = true;
+                // alert("Got it");
             }
+            else{
+
+        if(num > guess){//higher
+            guess = prompt("higher!");
+        }else{
+            guess = prompt("Lower");
         }
+        }
+    }
+            alert("Congradulations! you guess the correct number, which was " + guess + " and it took you " + numGuuesses + "times");
 
-        alert("Got It ! You Guessed " + numGuesses + " times");
-        //alert("Sorry!  You guessed " + guess + " and the number was " + num);
 
 
-	</script>
+    </script>
 </body>
 </html>
